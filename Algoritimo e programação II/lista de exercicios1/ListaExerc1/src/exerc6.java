@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class exerc6 {
-
+    //6) Ler 20 números reais e armazena esses valores em um array. O programa deve calcular a média
+    //aritmética dos valores do vetor e imprimir todos os valores menores do que a média calculada. 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         double[] array = new double[20];

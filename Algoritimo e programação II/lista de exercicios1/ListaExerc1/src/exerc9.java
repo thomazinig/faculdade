@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class exerc9 {
+    //9) Leia 10 números em uma array, pergunte ao usuário um número a ser procurado. Assim que
+    //localizar, imprimir qual a localização do número na array.
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int[] array = new int[10];

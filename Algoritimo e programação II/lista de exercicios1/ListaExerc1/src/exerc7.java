@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class exerc7 {
+    //7) Ler 10 salários. Depois de lidos e armazenados, mostre o maior valor. 
     public static void main(String[] args) {
         double salario;
         double maiorSalario = 0;

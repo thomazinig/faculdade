@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class exerc2 {
-   
+   //2)Preenche um array de tamanho 10 com números lidos pelo teclado e mostre os valores lidos
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int num;

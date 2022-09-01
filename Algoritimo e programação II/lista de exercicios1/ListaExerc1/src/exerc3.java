@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class exerc3 {
-    
+    // 3) Solicita 8 inteiros ao usuário e guarda esses valores em um array. Depois o programa deve
+    //descobrir e exibir qual a posição do elemento de maior valor. 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int num;

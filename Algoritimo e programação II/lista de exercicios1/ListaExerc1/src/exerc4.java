@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class exerc4 {
-   
+    //4) Solicita 5 valores ao usuário, armazena esses valores em um array chamado vet1 de inteiros.
+    //Depois, copia o conteúdo desse array para um segundo array chamado vet2. O programa deve
+    //imprimir os dois arrays na tela. 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int num;

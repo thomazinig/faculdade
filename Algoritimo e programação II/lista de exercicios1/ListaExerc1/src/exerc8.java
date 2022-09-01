@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class exerc8 {
+    //8) Crie um programa que leia 6 valores inteiros pares e, em seguida, mostre na tela os valores lidos
+    //na ordem inversa.
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int[] arrayNumPar = new int[6];

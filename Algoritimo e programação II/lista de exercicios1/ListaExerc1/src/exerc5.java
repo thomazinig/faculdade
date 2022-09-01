@@ -1,7 +1,10 @@
 import java.util.Scanner;
 
 public class exerc5 {
-    
+    //5) Modifique o exercício 3 de forma que o conteúdo de vet1 seja copiado para vet2 de forma
+    //invertida.
+    //Detalhe: o programa deve ser genérico de forma que independente do tamanho do vetor, a
+    //inversão será realizada corretamente.
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int num;
