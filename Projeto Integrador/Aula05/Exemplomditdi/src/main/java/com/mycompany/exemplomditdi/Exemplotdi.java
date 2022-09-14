@@ -4,6 +4,9 @@
  */
 package com.mycompany.exemplomditdi;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author guilherme.rthomazini
@@ -127,7 +130,7 @@ public class Exemplotdi extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtpin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addComponent(btnProximo)
                 .addGap(14, 14, 14))
         );
@@ -214,31 +217,42 @@ public class Exemplotdi extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
+            .addComponent(jTabbedPane2)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void TxtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCPFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TxtCPFActionPerformed
-
-    private void txtpinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpinActionPerformed
 
     private void btbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbVoltarActionPerformed
         jTabbedPane2.setSelectedIndex(0);
     }//GEN-LAST:event_btbVoltarActionPerformed
 
     private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
-    jTabbedPane2.setSelectedIndex(1);
-
+        
+        //validar obrigatoriedade
+        if (TxtNome.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(this,"digite o nome!!" );
+            return;
+        }
+        if (TxtCPF.getText().replace(".", "").replace("-", "").trim().equals("")){
+            JOptionPane.showMessageDialog(this,"digite o CPF!!" );
+            return;
+        }
+        if (txtpin.getPassword().equals("")){
+            JOptionPane.showMessageDialog(this,"digite o PIN!!!" );
+            return;
+        }
+      
+        jTabbedPane2.setSelectedIndex(1);
     }//GEN-LAST:event_btnProximoActionPerformed
+
+    private void txtpinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpinActionPerformed
+
+    private void TxtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCPFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtCPFActionPerformed
 
     /**
      * @param args the command line arguments
