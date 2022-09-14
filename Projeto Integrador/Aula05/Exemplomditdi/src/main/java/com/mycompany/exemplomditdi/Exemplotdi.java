@@ -237,7 +237,7 @@ public class Exemplotdi extends javax.swing.JFrame {
         if (TxtCPF.getText().replace(".", "").replace("-", "").trim().equals("")){
             JOptionPane.showMessageDialog(this,"digite o CPF!!" );
             return;
-        }
+        }   
         if (txtpin.getPassword().equals("")){
             JOptionPane.showMessageDialog(this,"digite o PIN!!!" );
             return;
