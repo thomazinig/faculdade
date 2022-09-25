@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-principal: #111;
+    --bg-secundario: #2D2D2D;
+    --cor-destaque: #FF0066;
+    --font-color-principal: #FFF;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+}
+
+a {
+    color: var(--font-color-principal);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: flex-end;
+}
+
+h1 {
+    color: #E08E00;
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    font-size: 4.8rem;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 2rem;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+#hero {
+    height: 40rem;
+    width: 100%;
+    position: relative;
+
+}
+
+#hero::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://image.tmdb.org/t/p/original/aXsKvHmTfMPG3WWjJTPjlgKdwP4.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+}
+
+
+
+.sinopse {
+    padding-left: 30rem;
+    padding-right: 22rem;
+    padding-top: 0rem;
+    text-shadow: 2px 2px 2px #111;
+    margin-top: -22rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    font-family: var(--font-destaque);
+
+}
+
+#hero h2 {
+    font-size: 3.6rem;
+    font-family: var(--font-destaque);
+    padding-left: 30rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    text-shadow: 2px 2px 2px #111;
+}
+
+.fichaTecnica{
+    margin-left: 100rem;
+    margin-top: -4rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    width: 180px;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+h3{
+        font-size: 1.5rem;
+        font-family: var(--font-principal);
+        font-weight: 700;
+        margin: 1.6rem;
+        padding-left: .4rem;
+        line-height: 19px;
+        letter-spacing: 0.04em
+
+}
+.elenco p{
+    margin-top: -.9rem;
+    margin-left: 1.6rem;
+    font-size: 1.5rem;
+    font-family: var(--font-principal);
+    padding-left: .4rem;
+    letter-spacing: 0.04rem;
+    color: #747474;
+    
+}
+
+.background{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-right: .3rem;
+    width: 180px;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-top: -30rem;
+   
+
+}
+.card{
+    margin-left: 1rem;
+    margin-top: -25rem;
+
+}
+.card h3{
+    margin-left: 6.5rem;
+}
+.card p{
+    margin-left: 6.5rem;
+}
+.card img {
+     margin-left: 1.3rem;
+    width: 15rem;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 3px solid #FFFFFF;
+    transition: filter .5s;
+}
+.botaoDiv{
+    margin-left: 4.2rem;
+    
+}
+.botao {
+    background-color:var(--cor-destaque);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 1rem 5rem;
+    margin: 1rem;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.botao:hover {
+    box-shadow: 0 0 8px #FFF;
+}
+
+.cartaz {
+    padding-left: 8rem;
+    margin-top: -4rem;
+    padding-right: -2rem;
+
+}
+
+.cartaz img {
+    border-radius: 10px;
+}
+.elenco h2{
+    
+        font-size: 1.8rem;
+        font-family: var(--font-principal);
+        font-weight: 700;
+        border-left: 4px solid var(--cor-destaque) ;
+        margin: 1.6rem;
+        padding-left: .4rem;
+    
+}
