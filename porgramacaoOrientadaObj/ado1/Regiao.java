@@ -5,6 +5,9 @@ public class Regiao {
     String nome;
     ArrayList<String> estados = new ArrayList<String>();
     double pib = 0.0;
+
+    
+
     public Regiao(String nome){
         this.nome = nome;
        
@@ -24,5 +27,13 @@ public class Regiao {
 
     public void setPib(double pib) {
         this.pib = pib;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

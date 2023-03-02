@@ -1,52 +1,50 @@
 import java.io.*;
 
-/**
- * Class Description . . . 
- *
- * @author: Autor
- * @version: 1.0 
- * Main Class File:  topAXX.java
- * File: Structure.java
- * Date: DD/MM/YYYY
- */
+//   @author: Thomazinig
+//   @version: 1.0 
 
 public class lab1 {
-    public static void main(String [] args) {
+    public static void main(String[] args) {
 
-        // nome do arquivo
         String nomeDoArquivo1 = "pib.txt";
-//      String nomeDoArquivo2 = "regioes.txt";
+        String nomeDoArquivo2 = "regioes.txt";
 
-        // linha temporaria
+        //
         String linha = null;
-        
-/*      ------------------------------------- */
-/*      Abertura de arquivo e loop de leitura */
-/*      ------------------------------------- */
+
+        Regiao regiao = new Regiao("");
+
         try {
-            FileReader fileReader = new FileReader(nomeDoArquivo1);
+            FileReader fileReader = new FileReader(nomeDoArquivo2);
 
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             // loop por cada linha do arquivo
-            while((linha = bufferedReader.readLine()) != null) {
-                System.out.println(linha);
-            }   
+            while ((linha = bufferedReader.readLine()) != null) {
+
+                Boolean lineBreak = false;
+                
+                if (linha.equals(System.lineSeparator())) {
+                    lineBreak = true;
+                } else {
+                    if (lineBreak) {
+                        Regiao reg = new Regiao(linha);
+                        lineBreak = false;
+                    }
+                    regiao.setEstado(linha);
+
+                }
+
+            }
 
             // feche o arquivo
-            bufferedReader.close();         
+            bufferedReader.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println("Arquivo inexistente: '" + nomeDoArquivo1 + "'");
+        } catch (IOException ex) {
+            System.out.println("Erro lendo o arquivo '" + nomeDoArquivo1 + "'");
         }
-        catch(FileNotFoundException ex) {
-            System.out.println("Arquivo inexistente: '" + nomeDoArquivo1 + "'");                
-        }
-        catch(IOException ex) {
-            System.out.println("Erro lendo o arquivo '" + nomeDoArquivo1 + "'");                  
-        }
-        
-        
-/*      ------------------------------------- */
-/*      Exemplo de escrita em arquivo         */
-/*      ------------------------------------- */
+
         String arquivoDeSaida = "saida.txt";
 
         try {
@@ -61,10 +59,9 @@ public class lab1 {
 
             // feche o arquivo
             bufferedWriter.close();
-        }
-        catch(IOException ex) {
+        } catch (IOException ex) {
             System.out.println("Erro de escrita em '" + arquivoDeSaida + "'");
-        }    
+        }
 
     }
 }
